@@ -110,9 +110,6 @@ public class Listeners implements Listener {
 	 	      }
 
 	 	   }
-			 public Player getPlayer() {
-					return this.player;
-				}
 	 	   	
 	    @EventHandler
 	    public void onPlayerJoin(PlayerJoinEvent event) {
@@ -154,7 +151,7 @@ public class Listeners implements Listener {
 		        if(Lvl) {
 		        int lvl = plugin.getTimer(nick);
 		        player.setLevel(lvl);
-		        }
+		        		}
 	    			}
 	        
     		}, 5, 20 * 1);
@@ -175,10 +172,10 @@ public class Listeners implements Listener {
         		if(plugin.getSuccess().containsKey(player)) {
         			bar.removeAll();
         	        plugin.getSuccess().remove(player);
-        				}
-    	        
+        					 }
+			
 					}, 5, 20 * 1);
-    	        
+					
 				}
 		    	Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> {
 		    		if(plugin.getCraftingPlayers().containsKey(player)) {
@@ -195,8 +192,8 @@ public class Listeners implements Listener {
 		        			Boolean Lvl = plugin.config().getLvl();
 					        if(Lvl) {
 					        player.setLevel(0);
-					    				}
-					    			}		
+					    					}
+					    			  	 }		
 					    
 								}
 		            String Success = plugin.config().getSuccess();
@@ -228,11 +225,11 @@ public class Listeners implements Listener {
 	            				plugin.removePlayer(player);
 	            			    player.kickPlayer(kick1);
 	            			    
-	            				}
+		            					}
 	       
-	                		}
+		                		    	}
 	                
-	        			}, timer1 * 20);
+		        			   }, timer1 * 20);
 	        
 					}	    
 			
