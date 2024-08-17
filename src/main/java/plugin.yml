@@ -1,0 +1,6 @@
+name: LofiAntiBot
+version: '1.1'
+main: ru.shved255.Main
+prefix: LofiAntiBot
+authors: [Shved255]
+website: LofiSpace.ru
