@@ -40,7 +40,7 @@ public class Main extends JavaPlugin {
     		saveDefaultConfig();
     	}
     	File playersFile = new File(getDataFolder() + File.separator + "players.yml"); {
-    	    if (!playersFile.exists())
+    	    if(!playersFile.exists())
     	      saveResource("players.yml", false); 
     		}
     	}

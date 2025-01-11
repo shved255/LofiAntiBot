@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 import ru.shved255.Main;
 
 public class Commands {
+	
   private Main plugin;
   
   public Commands(Main plugin) {
@@ -17,9 +18,11 @@ public class Commands {
   public void commands(Player player) {
 	    List<String> commandsPlayer = this.plugin.config().getCommandsPlayer(player);
 	    List<String> commandsServer = this.plugin.config().getCommandsServer(player);
-	    for (String command : commandsPlayer)
+	    for(String command : commandsPlayer) {
 	      Bukkit.dispatchCommand((CommandSender)player, command); 
-	    for (String command : commandsServer)
+	    }
+	    for(String command : commandsServer) {
 	      Bukkit.dispatchCommand((CommandSender)Bukkit.getConsoleSender(), command); 
+	    }
   }
 }

@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 import ru.shved255.Main;
 import ru.shved255.utils.hex.Hex;
 
-
 public class Config {
 
 	private Main plugin;
@@ -32,7 +31,6 @@ public class Config {
 	private String ungive;
 	private String barColor;
 	private String barStyle;
-	
 	
 	public Config(Main plugin) {
 		this.plugin = plugin;
@@ -118,12 +116,12 @@ public class Config {
 	public List<String> getCommandsPlayer(Player player) {
 		List<String> result = new ArrayList<>(this.commandsServer);
 		return result;
-		  }
+	}
 		  
 	public List<String> getCommandsServer(Player player) {
 	    String nick = player.getName();
 	    List<String> result = new ArrayList<>();
-	    for (String command : this.commandsServer) {
+	    for(String command : this.commandsServer) {
 	        result.add(command.replace("(PLAYER)", nick));
 	    }
 	    return result;
